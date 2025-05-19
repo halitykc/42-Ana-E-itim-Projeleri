@@ -120,7 +120,25 @@ int main()
 	printf("Test 2: %s\n", ft_substr("hello", 10, 3));
 	printf("Test 3: %s\n", ft_substr("abcdef", 3, 10));
 
-	printf("%s\n",ft_strjoin("halit ",""));
+	printf("%s\n\n",ft_strjoin("halit ",""));
 	
+	// Case 1: Baştan ve sondan kırpılacak karakterler
+    char *s1 = "-+-+-++--Hello World!-+-+-++";
+    char *set = "-+";
+    char *trimmed1 = ft_strtrim(s1, set);
+    printf("Case 1:\nOriginal: \"%s\"\nTrimmed: \"%s\"\n\n", s1, trimmed1);
+    free(trimmed1);
+
+    // Case 2: Tüm karakterler kırpılacak (tamamen set karakterlerinden oluşan bir string)
+    char *s2 = "-+-+-+-++--";
+    char *trimmed2 = ft_strtrim(s2, set);
+    printf("Case 2:\nOriginal: \"%s\"\nTrimmed: \"%s\"\n\n", s2, trimmed2);
+    free(trimmed2);
+
+    // Case 3: Hiçbir karakter kırpılmayacak (set içinde olmayan karakterlerle dolu)
+    char *s3 = "NoTrimHere";
+    char *trimmed3 = ft_strtrim(s3, set);
+    printf("Case 3:\nOriginal: \"%s\"\nTrimmed: \"%s\"\n\n", s3, trimmed3);
+    free(trimmed3);
 }
 

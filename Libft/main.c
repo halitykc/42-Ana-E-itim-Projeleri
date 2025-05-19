@@ -115,5 +115,9 @@ int main()
 	char *s = "halit";
 	char *popo = ft_strdup(s);
 	printf("%s\n", popo);
+
+	printf("Test 1: %s\n", ft_substr("hello world", 6, 5));  
+	printf("Test 2: %s\n", ft_substr("hello", 10, 3));
+	printf("Test 3: %s\n", ft_substr("abcdef", 3, 10));
 }
 

@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "libft.h"
 
+char my_func(unsigned int i, char str)
+{
+ 	printf("My inner function: index = %d and %c\n", i, str);
+	return str - 32;
+}
+
 int main()
 {
 	printf("%i\n",ft_isalpha('a'));
@@ -35,7 +41,7 @@ int main()
 	char dest1[10];
 
 	printf("%li\n%s \n", ft_strlcpy(dest1, src3, 10), dest1);
-	/*###############################################*/
+
 	char	buffer1[50] = "Hello, ";
 	char	buffer2[50] = "Hello, ";
 	char	buffer3[50] = "Hello, ";
@@ -147,14 +153,20 @@ int main()
 	int	o = 0;
 	while (res[o])
 	{
-		printf("%s\n",res[o++]);
+		printf("%s\n",res[o]);
+		free(res[o]);
+		o++;
 	}
+	free(res);
 
 	printf("itoa(0): %s\n", ft_itoa(0));
     printf("itoa(42): %s\n", ft_itoa(12345));
     printf("itoa(-42): %s\n", ft_itoa(-12345));
     printf("itoa(2147483647): %s\n", ft_itoa(2147483647));
     printf("itoa(-2147483648): %s\n", ft_itoa(-2147483648)); // int min
-	
+
+	char maxverstappen[10] = "hello.";
+	char	*rb = ft_strmapi(maxverstappen, my_func);
+	printf("%s\n",rb);
 }
 

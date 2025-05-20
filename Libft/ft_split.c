@@ -22,6 +22,13 @@ int ft_wc(char const *s, char c)
     return (count);
 }
 
+void    ft_free(char **res, int i)
+{
+    while (--i >= 0)
+        free(res[i]);
+    free(res);
+}
+
 void    ft_findnword(int *start, int *end, char const *s, char c)
 {
     *start = *end;
@@ -32,7 +39,7 @@ void    ft_findnword(int *start, int *end, char const *s, char c)
         (*end)++;
 }
 
-void    ft_fill_w(char **res, char const *s, char c, int num)
+int    ft_fill_w(char **res, char const *s, char c, int num)
 {
     int i;
     int start;
@@ -47,9 +54,16 @@ void    ft_fill_w(char **res, char const *s, char c, int num)
         ft_findnword(&start, &end, s, c);
         len = end - start;
         res[i] = ft_substr(s, (unsigned int)start, (size_t)len);
+        if (!res[i])
+        {
+            ft_free(res,i);
+            return (0);
+        }
+        
         i++;
     }
     res[i] = 0;
+    return (1);
 }
 
 char    **ft_split(char const *s, char c)
@@ -63,6 +77,7 @@ char    **ft_split(char const *s, char c)
     res = malloc((wnumber + 1) * sizeof(char *));
     if (!res)
         return (0);
-    ft_fill_w(res, s, c, wnumber);
+    if(!ft_fill_w(res, s, c, wnumber))
+        return (0);
     return (res);
 }

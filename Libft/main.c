@@ -140,5 +140,21 @@ int main()
     char *trimmed3 = ft_strtrim(s3, set);
     printf("Case 3:\nOriginal: \"%s\"\nTrimmed: \"%s\"\n\n", s3, trimmed3);
     free(trimmed3);
+
+	char **res;
+	char *halit = "kara kara daşşaklarim avuçlarini doldurur";
+	res = ft_split(halit, ' ');
+	int	o = 0;
+	while (res[o])
+	{
+		printf("%s\n",res[o++]);
+	}
+
+	printf("itoa(0): %s\n", ft_itoa(0));
+    printf("itoa(42): %s\n", ft_itoa(12345));
+    printf("itoa(-42): %s\n", ft_itoa(-12345));
+    printf("itoa(2147483647): %s\n", ft_itoa(2147483647));
+    printf("itoa(-2147483648): %s\n", ft_itoa(-2147483648)); // int min
+	
 }
 

@@ -7,6 +7,15 @@ char my_func(unsigned int i, char str)
 	return str - 32;
 }
 
+void my_func2(unsigned int i, char *str)
+{
+	(void)i;
+	if (*str >= 'a' && *str <= 'z')
+	{
+		*str -= 32;
+	}
+}
+
 int main()
 {
 	printf("%i\n",ft_isalpha('a'));
@@ -165,8 +174,11 @@ int main()
     printf("itoa(2147483647): %s\n", ft_itoa(2147483647));
     printf("itoa(-2147483648): %s\n", ft_itoa(-2147483648)); // int min
 
-	char maxverstappen[10] = "hello.";
+	char maxverstappen[10] = "helloNIGA";
 	char	*rb = ft_strmapi(maxverstappen, my_func);
-	printf("%s\n",rb);
+	printf("%s\n\n",rb);
+
+	ft_striteri(maxverstappen, my_func2);
+	printf("%s\n\n", maxverstappen);
 }
 

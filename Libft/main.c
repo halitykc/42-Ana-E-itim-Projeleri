@@ -189,5 +189,11 @@ int main()
 	ft_putendl_fd("musa isa sen bizi kutsa",1);
 
 	ft_putnbr_fd(-3131,1);
+	printf("\n");
+
+	// BONUS
+	t_list *llcontent = ft_lstnew("hello\n");
+	printf("%s",(char *)llcontent->content);
+
 }
 

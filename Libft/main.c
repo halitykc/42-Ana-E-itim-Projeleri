@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "libft.h"
-
+#include <fcntl.h>
 char my_func(unsigned int i, char str)
 {
  	printf("My inner function: index = %d and %c\n", i, str);
@@ -180,5 +180,13 @@ int main()
 
 	ft_striteri(maxverstappen, my_func2);
 	printf("%s\n\n", maxverstappen);
+	
+	ft_putchar_fd('A', 1);
+	ft_putchar_fd('\n', 1);
+
+	ft_putstr_fd("halit\n", 1);
+
+	ft_putendl_fd("musa isa sen bizi kutsa",1);
+
 }
 

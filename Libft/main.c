@@ -195,5 +195,8 @@ int main()
 	t_list *llcontent = ft_lstnew("hello\n");
 	printf("%s",(char *)llcontent->content);
 
+    printf("%i\n", ft_atoi_base("cafe", "0123456789abcdef"));
+
+
 }
 

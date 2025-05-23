@@ -1,0 +1,93 @@
+[4mintN_t[24m(3type)                                                                                                                                                                                [4mintN_t[24m(3type)
+
+[1mNAME[0m
+       intN_t, int8_t, int16_t, int32_t, int64_t, uintN_t, uint8_t, uint16_t, uint32_t, uint64_t - fixed-width basic integer types
+
+[1mLIBRARY[0m
+       Standard C library ([4mlibc[24m)
+
+[1mSYNOPSIS[0m
+       [1m#include <stdint.h>[0m
+
+       [1mtypedef [22m/* ... */ [1mint8_t;[0m
+       [1mtypedef [22m/* ... */ [1mint16_t;[0m
+       [1mtypedef [22m/* ... */ [1mint32_t;[0m
+       [1mtypedef [22m/* ... */ [1mint64_t;[0m
+
+       [1mtypedef [22m/* ... */ [1muint8_t;[0m
+       [1mtypedef [22m/* ... */ [1muint16_t;[0m
+       [1mtypedef [22m/* ... */ [1muint32_t;[0m
+       [1mtypedef [22m/* ... */ [1muint64_t;[0m
+
+       [1m#define INT8_WIDTH   8[0m
+       [1m#define INT16_WIDTH  16[0m
+       [1m#define INT32_WIDTH  32[0m
+       [1m#define INT64_WIDTH  64[0m
+
+       [1m#define UINT8_WIDTH  8[0m
+       [1m#define UINT16_WIDTH 16[0m
+       [1m#define UINT32_WIDTH 32[0m
+       [1m#define UINT64_WIDTH 64[0m
+
+       [1m#define INT8_MAX     [22m/*  2**(INT8_WIDTH - 1) - 1   */
+       [1m#define INT16_MAX    [22m/*  2**(INT16_WIDTH - 1) - 1  */
+       [1m#define INT32_MAX    [22m/*  2**(INT32_WIDTH - 1) - 1  */
+       [1m#define INT64_MAX    [22m/*  2**(INT64_WIDTH - 1) - 1  */
+
+       [1m#define INT8_MIN     [22m/*  - 2**(INT8_WIDTH - 1)     */
+       [1m#define INT16_MIN    [22m/*  - 2**(INT16_WIDTH - 1)    */
+       [1m#define INT32_MIN    [22m/*  - 2**(INT32_WIDTH - 1)    */
+       [1m#define INT64_MIN    [22m/*  - 2**(INT64_WIDTH - 1)    */
+
+       [1m#define UINT8_MAX    [22m/*  2**INT8_WIDTH - 1         */
+       [1m#define UINT16_MAX   [22m/*  2**INT16_WIDTH - 1        */
+       [1m#define UINT32_MAX   [22m/*  2**INT32_WIDTH - 1        */
+       [1m#define UINT64_MAX   [22m/*  2**INT64_WIDTH - 1        */
+
+       [1m#define INT8_C([4m[22mc[24m[1m)    [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define INT16_C([4m[22mc[24m[1m)   [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define INT32_C([4m[22mc[24m[1m)   [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define INT64_C([4m[22mc[24m[1m)   [4m[22mc[24m [1m## [22m/* ... */
+
+       [1m#define UINT8_C([4m[22mc[24m[1m)   [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define UINT16_C([4m[22mc[24m[1m)  [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define UINT32_C([4m[22mc[24m[1m)  [4m[22mc[24m [1m## [22m/* ... */
+       [1m#define UINT64_C([4m[22mc[24m[1m)  [4m[22mc[24m [1m## [22m/* ... */
+
+[1mDESCRIPTION[0m
+       [4mint[24mN[4m_t[24m are signed integer types of a fixed width of exactly N bits, [4mN[24m being the value specified in its type name.  They are be capable of storing values in the range [[1mINT[4m[22mN[24m[1m_MIN[22m, [1mINT[4m[22mN[24m[1m_MAX[22m], substi‐
+       tuting [4mN[24m by the appropriate number.
+
+       [4muint[24mN[4m_t[24m  are unsigned integer types of a fixed width of exactly N bits, N being the value specified in its type name.  They are capable of storing values in the range [[1m0[22m, [1mUINT[4m[22mN[24m[1m_MAX[22m], substituting
+       [4mN[24m by the appropriate number.
+
+       According to POSIX, [[4mu[24m][4mint8_t[24m, [[4mu[24m][4mint16_t[24m, and [[4mu[24m][4mint32_t[24m are required; [[4mu[24m][4mint64_t[24m are only required in implementations that provide integer types with width 64; and all other types of this  form
+       are optional.
+
+       The macros [[1mU[22m][1mINT[4m[22mN[24m[1m_WIDTH [22mexpand to the width in bits of these types ([4mN[24m).
+
+       The macros [[1mU[22m][1mINT[4m[22mN[24m[1m_MAX [22mexpand to the maximum value that these types can hold.
+
+       The macros [1mINT[4m[22mN[24m[1m_MIN [22mexpand to the minimum value that these types can hold.
+
+       The macros [[1mU[22m][1mINT[4m[22mN[24m[1m_C[22m() expand their argument to an integer constant of type [[4mu[24m][4mint[24mN[4m_t[24m.
+
+       The  length modifiers for the [[4mu[24m][4mint[24mN[4m_t[24m types for the [1mprintf[22m(3) family of functions are expanded by macros of the forms [1mPRId[4m[22mN[24m, [1mPRIi[4m[22mN[24m, [1mPRIu[4m[22mN[24m, and [1mPRIx[4m[22mN[24m (defined in [4m<inttypes.h>[24m); resulting for ex‐
+       ample in [1m%"PRId64" [22mor [1m%"PRIi64" [22mfor printing [4mint64_t[24m values.  The length modifiers for the [[4mu[24m][4mint[24mN[4m_t[24m types for the [1mscanf[22m(3) family of functions are expanded by macros of the forms  [1mSCNd[4m[22mN[24m,  [1mSCNi[4m[22mN[24m,
+       [1mSCNu[4m[22mN[24m, and [1mSCNx[4m[22mN,[24m (defined in [4m<inttypes.h>[24m); resulting for example in [1m%"SCNu8" [22mor [1m%"SCNx8" [22mfor scanning [4muint8_t[24m values.
+
+[1mSTANDARDS[0m
+       C11, POSIX.1-2008.
+
+[1mHISTORY[0m
+       C99, POSIX.1-2001.
+
+       The [[1mU[22m][1mINT[4m[22mN[24m[1m_WIDTH [22mmacros were added in C23.
+
+[1mNOTES[0m
+       The following header also provides these types: [4m<inttypes.h>[24m.  [4m<arpa/inet.h>[24m also provides [4muint16_t[24m and [4muint32_t[24m.
+
+[1mSEE ALSO[0m
+       [1mintmax_t[22m(3type), [1mintptr_t[22m(3type), [1mprintf[22m(3)
+
+Linux man-pages 6.7                                                                             2023-10-31                                                                                   [4mintN_t[24m(3type)

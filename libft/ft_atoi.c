@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:47:58 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 11:48:09 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:16:02 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

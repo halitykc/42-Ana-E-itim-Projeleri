@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:28 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 13:03:54 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:16:16 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

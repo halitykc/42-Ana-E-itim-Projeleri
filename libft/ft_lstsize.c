@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:27:15 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:27:42 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:14:16 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:27:49 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:37:09 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:14:10 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:40:14 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:40:14 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:13:06 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

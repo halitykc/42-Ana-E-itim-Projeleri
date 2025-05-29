@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:41:53 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:45:24 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:11:48 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

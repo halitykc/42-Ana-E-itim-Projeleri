@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:43:19 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:43:19 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:11:12 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

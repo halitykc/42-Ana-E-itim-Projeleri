@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:29:43 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:38:16 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:14:04 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

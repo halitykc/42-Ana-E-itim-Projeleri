@@ -6,11 +6,9 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:02:37 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 13:04:50 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:16:22 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

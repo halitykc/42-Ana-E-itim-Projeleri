@@ -6,9 +6,11 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:48:42 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/29 12:16:06 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 22:13:19 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {

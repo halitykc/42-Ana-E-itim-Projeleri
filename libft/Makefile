@@ -53,17 +53,16 @@ OBJS = $(SRCS:.c=.o)
 all : $(TARGET)
 
 $(TARGET) : $(OBJS)
-	@ar -rcs $(TARGET) $(OBJS)
+	ar -rcs $(TARGET) $(OBJS)
 
 run	:
 	$(CC) main.c -L. -lft -o main
-	@./main
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
-	@rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS) $(TARGET)
 
 re: clean all
 

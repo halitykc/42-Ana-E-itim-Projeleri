@@ -6,13 +6,13 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:04:06 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:13:04 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 09:07:23 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_digt(int i)
+static int	ft_count_digt(int i)
 {
 	int	s;
 
@@ -27,7 +27,7 @@ int	ft_count_digt(int i)
 	return (s);
 }
 
-void	ft_fill_res(int n, char *result, int len)
+static void	ft_fill_res(int n, char *result, int len)
 {
 	int	number;
 

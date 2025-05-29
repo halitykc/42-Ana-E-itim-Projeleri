@@ -6,13 +6,13 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:43:14 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:43:15 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 09:09:37 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_set_control(char const *set, char c)
+static int	ft_set_control(char const *set, char c)
 {
 	int	i;
 

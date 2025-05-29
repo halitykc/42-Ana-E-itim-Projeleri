@@ -6,13 +6,13 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:38:56 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:40:06 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 09:04:48 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_wc(char const *s, char c)
+static int	ft_wc(char const *s, char c)
 {
 	int	i;
 	int	inword;
@@ -34,14 +34,14 @@ int	ft_wc(char const *s, char c)
 	return (count);
 }
 
-void	ft_free(char **res, int i)
+static void	ft_free(char **res, int i)
 {
 	while (--i >= 0)
 		free(res[i]);
 	free(res);
 }
 
-void	ft_findnword(int *start, int *end, char const *s, char c)
+static void	ft_findnword(int *start, int *end, char const *s, char c)
 {
 	*start = *end;
 	while (s[*start] && s[*start] == c)
@@ -51,7 +51,7 @@ void	ft_findnword(int *start, int *end, char const *s, char c)
 		(*end)++;
 }
 
-int	ft_fill_w(char **res, char const *s, char c, int num)
+static int	ft_fill_w(char **res, char const *s, char c, int num)
 {
 	int	i;
 	int	start;

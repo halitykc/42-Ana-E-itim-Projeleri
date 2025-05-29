@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:48:59 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 13:04:26 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/29 09:06:31 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,5 @@ int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *list);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
-int					ft_atoi_base(char *str, char *base);
 
 #endif

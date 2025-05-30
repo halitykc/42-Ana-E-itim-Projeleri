@@ -5,7 +5,6 @@ CFLAGS = -Wall -Werror -Wextra
 TARGET = libft.a
 
 SRCS = \
-	ft_atoi_base.c \
 	ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
@@ -46,7 +45,8 @@ SRCS = \
 	ft_strtrim.c \
 	ft_substr.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	ft_lstiter.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -56,7 +56,8 @@ $(TARGET) : $(OBJS)
 	ar -rcs $(TARGET) $(OBJS)
 
 run	:
-	$(CC) main.c -L. -lft -o main
+	@$(CC) main.c -L. -lft -o main
+	@./main
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@

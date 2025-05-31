@@ -6,16 +6,25 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 10:27:58 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/30 10:55:46 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/05/31 15:48:40 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*reptr;
-	int		l_size;
+	t_list	*newnode;
 
-	l_size = ft_lstsize(lst);
+	if (!lst || !f || !del)
+		return (0);
+	reptr = NULL;
+	while (lst)
+	{
+		newnode = ft_lstnew(f(lst->content));
+		ft_lstadd_back(&reptr, newnode);
+		lst = lst->next;
+	}
+	return (reptr);
 }

@@ -2,10 +2,9 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
-TARGET = libft.a
+NAME = libft.a
 
-SRCS = \
-	ft_atoi.c \
+SRCS = ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
 	ft_isalnum.c \
@@ -14,13 +13,6 @@ SRCS = \
 	ft_isdigit.c \
 	ft_isprint.c \
 	ft_itoa.c \
-	ft_lstadd_back.c \
-	ft_lstadd_front.c \
-	ft_lstclear.c \
-	ft_lstdelone.c \
-	ft_lstlast.c \
-	ft_lstnew.c \
-	ft_lstsize.c \
 	ft_memchr.c \
 	ft_memcmp.c \
 	ft_memcpy.c \
@@ -46,14 +38,23 @@ SRCS = \
 	ft_substr.c \
 	ft_tolower.c \
 	ft_toupper.c \
-	ft_lstiter.c
 
 OBJS = $(SRCS:.c=.o)
 
-all : $(TARGET)
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c	\
+		ft_lstlast.c	\
+		ft_lstadd_back.c	\
+		ft_lstdelone.c	\
+		ft_lstclear.c	\
+		ft_lstiter.c	\
+		ft_lstmap.c	\
+		
+all : $(NAME)
 
-$(TARGET) : $(OBJS)
-	ar -rcs $(TARGET) $(OBJS)
+$(NAME) : $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 run	:
 	@$(CC) main.c -L. -lft -o main
@@ -64,6 +65,9 @@ run	:
 
 clean :
 	rm -f $(OBJS) $(TARGET)
+
+fclean: clean
+	rm -f $(NAME)
 
 re: clean all
 

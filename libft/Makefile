@@ -49,12 +49,17 @@ BONUS = ft_lstnew.c \
 		ft_lstdelone.c	\
 		ft_lstclear.c	\
 		ft_lstiter.c	\
-		ft_lstmap.c	\
+		ft_lstmap.c
+
+BNSOBJ = $(BONUS:.c=.o)
 		
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+bonus : $(NAME) $(BNSOBJ) 
+	ar rcs $(NAME) $(OBJS) $(BNSOBJ)
 
 run	:
 	@$(CC) main.c -L. -lft -o main
@@ -64,12 +69,12 @@ run	:
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS) $(TARGET) $(BNSOBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: clean all
+re: clean all fclean
 
-.PHONY: all clean re
+.PHONY: all clean re fclean
 

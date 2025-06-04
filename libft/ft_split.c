@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:38:56 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/29 09:04:48 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/06/03 23:08:43 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,12 @@ char	**ft_split(char const *s, char c)
 	int		wnumber;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	wnumber = ft_wc(s, c);
 	res = malloc((wnumber + 1) * sizeof(char *));
 	if (!res)
-		return (0);
+		return (NULL);
 	if (!ft_fill_w(res, s, c, wnumber))
-		return (0);
+		return (NULL);
 	return (res);
 }

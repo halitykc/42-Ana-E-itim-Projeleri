@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:39:14 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/31 17:00:20 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/06/03 21:05:42 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	alen;
 
 	if ((!s || !len) || start >= ft_strlen(s))
-		return ((char *)ft_calloc(1, sizeof(char)));
+		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
 		alen = ft_strlen(s) - start;
 	else

@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:59:54 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:00:20 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/06/02 18:30:14 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	ptr = malloc(size * nmemb);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

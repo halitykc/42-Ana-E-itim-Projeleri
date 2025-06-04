@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:25:14 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/28 12:37:09 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/06/03 23:25:13 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	a = malloc(sizeof(t_list));
 	if (!a)
-		return (0);
+		return (NULL);
 	(*a).content = content;
 	(*a).next = NULL;
 	return (a);

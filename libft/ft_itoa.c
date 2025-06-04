@@ -6,7 +6,7 @@
 /*   By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 12:04:06 by hyakici           #+#    #+#             */
-/*   Updated: 2025/05/29 09:07:23 by hyakici          ###   ########.fr       */
+/*   Updated: 2025/06/02 18:32:22 by hyakici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 		len = ft_count_digt(n);
 	result = malloc(len + 1);
 	if (!result)
-		return (0);
+		return (NULL);
 	ft_fill_res(n, result, len);
 	return (result);
 }

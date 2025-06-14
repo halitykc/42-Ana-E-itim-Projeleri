@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hyakici <hyakici@student.42istanbul.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/06/10 15:32:20 by hyakici           #+#    #+#              #
+#    Updated: 2025/06/13 15:08:00 by hyakici          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
@@ -41,15 +53,15 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c	\
-		ft_lstlast.c	\
-		ft_lstadd_back.c	\
-		ft_lstdelone.c	\
-		ft_lstclear.c	\
-		ft_lstiter.c	\
-		ft_lstmap.c
+BONUS = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c	\
+		ft_lstlast_bonus.c	\
+		ft_lstadd_back_bonus.c	\
+		ft_lstdelone_bonus.c	\
+		ft_lstclear_bonus.c	\
+		ft_lstiter_bonus.c	\
+		ft_lstmap_bonus.c
 
 BNSOBJ = $(BONUS:.c=.o)
 		
@@ -61,20 +73,16 @@ $(NAME) : $(OBJS)
 bonus : $(NAME) $(BNSOBJ) 
 	ar rcs $(NAME) $(OBJS) $(BNSOBJ)
 
-run	:
-	@$(CC) main.c -L. -lft -o main
-	@./main
-
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
-	rm -f $(OBJS) $(TARGET) $(BNSOBJ)
+	rm -f $(OBJS) $(BNSOBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: clean all fclean
+re: fclean all
 
-.PHONY: all clean re fclean
+.PHONY: all clean re fclean bonus
 
